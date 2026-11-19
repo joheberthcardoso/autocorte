@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoCorte: a live nem acabou e os cortes já estão prontos</title>
+<meta name="description" content="Cole o link da live e receba cortes prontos para TikTok, Reels e Shorts: cortados, legendados, com gancho e áudio ajustado. Sem editar e sem esperar a live acabar.">
+<meta property="og:title" content="AutoCorte: a live nem acabou e os cortes já estão prontos">
+<meta property="og:description" content="Cole o link da live e receba cortes prontos, legendados e com gancho. Pagamento único.">
+<meta property="og:image" content="capa.png">
+<meta name="theme-color" content="#09090d">
+<link rel="icon" href="icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090d;--bg2:#0f0f15;--card:#14141c;--card2:#1a1a24;--line:#262633;--line2:#33334a;--tx:#f4f4f7;--tx2:#a9a9bd;--tx3:#6b6b80;--y:#ffe600;--y2:#ffb800;--verde:#2ee59d;--verm:#ff3b5c;--roxo:#8b5cff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;line-height:1.5;
+  background:radial-gradient(800px 500px at 90% -5%,rgba(139,92,255,.2),transparent 60%),radial-gradient(700px 500px at -10% 5%,rgba(255,230,0,.08),transparent 60%),var(--bg)}
+a{color:inherit}
+.w{max-width:1080px;margin:0 auto;padding:0 18px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Archivo Black";font-size:20px}
+.logo img{width:36px;height:36px}.logo b{color:var(--y)}
+.top a.mini{font-weight:800;font-size:14px;text-decoration:none;background:var(--card2);border:1px solid var(--line2);padding:9px 14px;border-radius:11px}
+section{padding:46px 0}
+.kicker{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:800;color:var(--y);background:rgba(255,230,0,.08);border:1px solid rgba(255,230,0,.25);padding:7px 13px;border-radius:99px}
+h1{font-family:"Archivo Black";font-size:clamp(34px,7vw,58px);line-height:1;text-transform:uppercase;letter-spacing:-.5px;margin:18px 0 14px}
+h1 span,h2 span{color:var(--y)}
+h2{font-family:"Archivo Black";font-size:clamp(28px,5.2vw,42px);line-height:1.05;text-transform:uppercase;margin-bottom:12px}
+.lead{color:var(--tx2);font-size:clamp(16px,2.4vw,19px);max-width:560px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"t v" "c v";column-gap:40px;align-items:center;padding-top:18px}
+.hero .ht{grid-area:t;align-self:end}.hero .ctawrap{grid-area:c;align-self:start}.hero .vsl{grid-area:v}
+.vsl{position:relative;width:min(360px,100%);margin:0 auto;aspect-ratio:9/16;border-radius:26px;overflow:hidden;border:6px solid #23232f;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,230,0,.15)}
+.vsl video{width:100%;height:100%;object-fit:cover;display:block}
+.som{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:var(--y);color:#000;font-weight:800;font-size:14px;border:0;border-radius:99px;padding:10px 16px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.4);white-space:nowrap}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:520px;background:var(--y);color:#000;text-decoration:none;font-family:"Archivo Black";font-size:clamp(16px,2.6vw,20px);text-transform:uppercase;padding:19px 22px;border-radius:16px;box-shadow:0 12px 40px rgba(255,230,0,.3);transition:.15s;text-align:center}
+.cta:hover{transform:translateY(-2px);box-shadow:0 16px 50px rgba(255,230,0,.45)}
+.micro{font-size:13.5px;color:var(--tx3);margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.micro span::before{content:"✓ ";color:var(--verde);font-weight:800}
+.ctawrap{margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.vs h3{font-size:17px;margin-bottom:12px}
+.vs ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.vs li{display:flex;gap:10px;font-size:15.5px;color:var(--tx2)}
+.antes h3{color:#ff8ea2}.depois{border-color:rgba(255,230,0,.4);background:linear-gradient(180deg,rgba(255,230,0,.06),var(--card))}.depois h3{color:var(--y)}
+.depois li{color:var(--tx)}
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.passo .n{width:44px;height:44px;border-radius:13px;background:var(--y);color:#000;font-family:"Archivo Black";font-size:20px;display:grid;place-items:center;margin-bottom:14px}
+.passo b{display:block;font-size:17px;margin-bottom:6px}.passo p{color:var(--tx2);font-size:15px}
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.feat .e{font-size:26px;margin-bottom:8px}.feat b{display:block;margin-bottom:5px}.feat p{color:var(--tx2);font-size:14px;line-height:1.45}
+.prova{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+.prova .big{font-family:"Archivo Black";font-size:clamp(30px,5vw,44px);color:var(--y);line-height:1}
+.prova p{color:var(--tx2);margin-top:8px}
+.prova small{display:block;color:var(--tx3);margin-top:8px;font-size:12.5px}
+.req{border-color:rgba(255,59,92,.35);background:linear-gradient(180deg,rgba(255,59,92,.06),var(--card))}
+.req ul{list-style:none;margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.req li{font-size:15.5px}
+.oferta{max-width:560px;margin:22px auto 0;text-align:center;border:2px solid var(--y);box-shadow:0 0 60px rgba(255,230,0,.15)}
+.oferta .lbl{font-size:13px;font-weight:800;color:var(--tx3);text-transform:uppercase;letter-spacing:1px}
+.preco{font-family:"Archivo Black";font-size:clamp(52px,10vw,72px);line-height:1;margin:10px 0 4px}
+.preco small{font-size:.4em;vertical-align:top;margin-right:4px}
+.oferta ul{list-style:none;text-align:left;margin:20px auto;max-width:400px;display:flex;flex-direction:column;gap:9px}
+.oferta li::before{content:"✅ "}
+.oferta .cta{margin:0 auto}
+.gar{margin-top:16px;color:var(--tx2);font-size:14px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:10px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--y);font-weight:800;font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--tx2);margin-top:10px;font-size:15px}
+footer{padding:40px 0 110px;color:var(--tx3);font-size:13px;text-align:center;border-top:1px solid var(--line);margin-top:30px}
+.fixo{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(9,9,13,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:none}
+.fixo .cta{max-width:none;padding:15px;font-size:16px}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;grid-template-areas:"t" "v" "c";row-gap:24px;text-align:center}
+  .hero .ctawrap{margin-top:0}
+  .hero .lead{margin:0 auto}.hero .cta{margin:0 auto}.hero .micro{justify-content:center}
+  .vs,.passos,.prova{grid-template-columns:1fr}
+  .feats{grid-template-columns:1fr 1fr}
+  .req ul{grid-template-columns:1fr}
+  .fixo.on{display:block}
+}
+</style>
+</head>
+<body>
+<div class="w">
+  <div class="top">
+    <div class="logo"><img src="icone.png" alt="">AUTO<b>CORTE</b></div>
+    <a class="mini" href="#oferta">R$ 57,90</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="ht">
+      <span class="kicker">✂️ Para clipadores e editores de corte</span>
+      <h1>A live nem acabou e os <span>cortes</span> já estão prontos</h1>
+      <p class="lead">Cole o link de uma live e receba cortes prontos para TikTok, Reels e Shorts: cortados, legendados, com gancho e áudio ajustado. Enquanto os outros clipadores ainda estão baixando a live, você já postou.</p>
+    </div>
+    <div class="ctawrap">
+      <a class="cta" href="https://pay.cakto.com.br/p82brca_1346105">Quero o AutoCorte ⚡</a>
+      <div class="micro"><span>Pagamento único</span><span>Pix ou cartão</span><span>Acesso por e-mail na hora</span></div>
+    </div>
+    <div class="vsl">
+      <video id="vsl" src="vsl.mp4" poster="vsl-capa.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      <button class="som" id="som">🔊 Toque para ouvir</button>
+    </div>
+  </section>
+
+  <!-- ANTES x DEPOIS -->
+  <section>
+    <h2>Chega de perder a <span>madrugada</span> editando</h2>
+    <div class="vs">
+      <div class="card antes">
+        <h3>❌ Do jeito antigo</h3>
+        <ul>
+          <li>Esperar a live inteira acabar</li>
+          <li>Baixar um arquivo gigante</li>
+          <li>Assistir tudo de novo caçando os momentos</li>
+          <li>Cortar, legendar e ajustar o áudio na mão</li>
+          <li>Horas de trabalho para postar 2 ou 3 vídeos</li>
+        </ul>
+      </div>
+      <div class="card depois">
+        <h3>✅ Com o AutoCorte</h3>
+        <ul>
+          <li>Cola o link, inclusive com a live ao vivo</li>
+          <li>Ele ouve tudo e acha os picos sozinho</li>
+          <li>Corta em 9:16 com legenda palavra por palavra</li>
+          <li>Gancho forte no topo e áudio no padrão das redes</li>
+          <li>Você posta primeiro, enquanto os outros editam</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section>
+    <h2>Simples assim, em <span>3 passos</span></h2>
+    <div class="passos">
+      <div class="card passo"><div class="n">1</div><b>Cole o link</b><p>Da live no YouTube, Twitch ou Kick, ao vivo ou já gravada.</p></div>
+      <div class="card passo"><div class="n">2</div><b>Escolha o formato</b><p>Fundo desfocado, tela cheia ou webcam em cima e jogo embaixo.</p></div>
+      <div class="card passo"><div class="n">3</div><b>Baixe e poste</b><p>Os cortes vão aparecendo prontos. Troque o gancho se quiser e baixe.</p></div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section>
+    <h2>Tudo que ele faz <span>por você</span></h2>
+    <div class="feats">
+      <div class="card feat"><div class="e">🎧</div><b>Ouve a live</b><p>Transcreve cada palavra com o tempo exato.</p></div>
+      <div class="card feat"><div class="e">🎯</div><b>Acha os picos</b><p>Reações, gritos, risadas, "não acredito!".</p></div>
+      <div class="card feat"><div class="e">🎬</div><b>Corta em 9:16</b><p>Pronto para TikTok, Reels e Shorts.</p></div>
+      <div class="card feat"><div class="e">💬</div><b>Legenda viral</b><p>Palavra por palavra, com destaque amarelo.</p></div>
+      <div class="card feat"><div class="e">🔥</div><b>Gancho no topo</b><p>Nos primeiros segundos, e você pode editar.</p></div>
+      <div class="card feat"><div class="e">🔊</div><b>Áudio ajustado</b><p>Volume no padrão das redes sociais.</p></div>
+      <div class="card feat"><div class="e">🔴</div><b>Funciona ao vivo</b><p>A cada 5, 10 ou 15 min já saem cortes.</p></div>
+      <div class="card feat"><div class="e">📈</div><b>Mapa de emoção</b><p>Veja os picos da live num gráfico.</p></div>
+    </div>
+  </section>
+
+  <!-- PROVA -->
+  <section>
+    <h2>Testado em <span>live de verdade</span></h2>
+    <div class="prova">
+      <div class="card"><div class="big">15 min → 6 cortes</div><p>15 minutos de uma live de GTA 6 viraram 6 cortes prontos, legendados e com gancho, sem nenhuma edição manual.</p><small>Teste feito em um PC comum, sem placa de vídeo.</small></div>
+      <div class="card"><div class="big">Live no ar → 2 cortes</div><p>Com a live ainda acontecendo, o primeiro bloco de 5 minutos já virou 2 cortes prontos para postar.</p><small>O tempo varia conforme o computador e a internet.</small></div>
+    </div>
+  </section>
+
+  <!-- REQUISITOS -->
+  <section>
+    <div class="card req">
+      <h2 style="font-size:clamp(22px,4vw,30px)">⚠️ Leia antes de comprar</h2>
+      <ul>
+        <li>💻 <b>Só para Windows 10 ou 11</b> (64 bits)</li>
+        <li>🚫 Não funciona em Mac, celular ou Chromebook</li>
+        <li>🌐 Precisa de internet</li>
+        <li>💾 Uns 2 GB livres no disco</li>
+        <li>⚙️ Não precisa de placa de vídeo</li>
+        <li>⏱️ Quanto melhor o processador, mais rápido</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section id="oferta">
+    <h2 style="text-align:center">Comece a <span>postar mais</span> hoje</h2>
+    <div class="card oferta">
+      <div class="lbl">Pagamento único · sem mensalidade</div>
+      <div class="preco"><small>R$</small>57,90</div>
+      <ul>
+        <li>Programa AutoCorte para Windows</li>
+        <li>Cortes ilimitados, ao vivo ou gravados</li>
+        <li>3 formatos de corte</li>
+        <li>Guia de instalação passo a passo</li>
+        <li>Acesso enviado por e-mail logo após a compra</li>
+      </ul>
+      <a class="cta" href="https://pay.cakto.com.br/p82brca_1346105">Quero o AutoCorte ⚡</a>
+      <p class="gar">🛡️ Garantia de 7 dias: se não gostar, peça seu dinheiro de volta.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Perguntas <span>frequentes</span></h2>
+    <details><summary>Funciona no celular ou no Mac?</summary><p>Não. Só em computador com Windows 10 ou 11 de 64 bits.</p></details>
+    <details><summary>Preciso saber editar vídeo?</summary><p>Não. Você só cola o link e escolhe o formato. O programa corta, legenda e ajusta o áudio sozinho.</p></details>
+    <details><summary>Preciso esperar a live acabar?</summary><p>Não. Com a live ao vivo, ele grava em blocos e já entrega cortes a cada bloco.</p></details>
+    <details><summary>Funciona com quais plataformas?</summary><p>YouTube, Twitch e Kick, ao vivo ou vídeos já gravados.</p></details>
+    <details><summary>Tem mensalidade?</summary><p>Não. Pagamento único.</p></details>
+    <details><summary>Posso mudar o texto do gancho?</summary><p>Pode. Em cada corte você troca o texto e clica em "Aplicar gancho": o corte é refeito na hora.</p></details>
+    <details><summary>Precisa de placa de vídeo?</summary><p>Não. Funciona só com o processador. Em PC mais fraco, os cortes demoram um pouco mais.</p></details>
+    <details><summary>Como recebo o programa?</summary><p>Logo após a compra, você recebe por e-mail o link para baixar o instalador e o guia de instalação.</p></details>
+  </section>
+
+  <div style="text-align:center;padding-bottom:20px"><a class="cta" style="margin:0 auto" href="https://pay.cakto.com.br/p82brca_1346105">Quero o AutoCorte ⚡</a></div>
+</div>
+
+<footer><div class="w">
+  Use o AutoCorte em lives de criadores que autorizam cortes (como os programas de clipes) ou nas suas próprias lives. Respeite os direitos autorais e as regras de cada plataforma.<br><br>
+  © 2026 AutoCorte · Pagamento processado pela Cakto
+</div></footer>
+
+<div class="fixo" id="fixo"><a class="cta" href="https://pay.cakto.com.br/p82brca_1346105">Quero o AutoCorte · R$ 57,90</a></div>
+
+<script>
+const v = document.getElementById("vsl"), som = document.getElementById("som");
+som.onclick = () => { v.muted = false; v.currentTime = 0; v.play(); som.remove(); };
+v.addEventListener("error", () => { som.style.display = "none"; });
+// barra fixa de compra no celular depois que o primeiro botão sai da tela
+const fixo = document.getElementById("fixo"), b1 = document.querySelector(".hero .cta");
+new IntersectionObserver(([e]) => fixo.classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0)).observe(b1);
+</script>
+</body>
+</html>
